@@ -10,11 +10,13 @@ public class DatosUsuarios {
         int Edad = sc.nextInt();
         String correo = sc.nextLine();
         boolean emailValido = ProcesadorTexto.esEmailValido(correo);
-        if (emailValido){
-        System.out.println("Registrado");
+        if emailValido{
+            System.out.println(correo + "Registrado");
         } else { 
-            System.out.println("No tienes edad para conducir");
+            System.out.println("e");
         }
+
+
          
         
 
