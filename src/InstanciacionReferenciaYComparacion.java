@@ -1,3 +1,6 @@
+import utilidades.Cancion;
+import utilidades.Pelicula;
+
 public class InstanciacionReferenciaYComparacion {
     public static void main(String[] args) {
 
@@ -13,7 +16,13 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
         
-        
+        Cancion c1 = new Cancion();
+        Cancion c2 = new Cancion("Clocks", "Coldplay");
+        System.out.println(c1);
+        System.out.println(c2);
+
+        // Uno simplemente da un titulo y artista por defecto el cual seria "desconocido" y el otro uno personalizado
+
 
 
         // ================================
@@ -23,8 +32,13 @@ public class InstanciacionReferenciaYComparacion {
         // (ejemplo: "Clocks", "Coldplay").
         // 2. Imprime el resultado de (c3 == c4).
         // 3. Piensa: ¿por qué da false aunque los datos sean iguales?
-
         // Tu código aquí ↓
+
+        Cancion c3 = new Cancion("Clocks", "Coldplay");
+        Cancion c4 = new Cancion("Clocks", "Coldplay");
+        System.out.println(c3 == c4);
+
+        // Da false porque consumen diferentes sitios en memoria a pesar de ser iguales en atributos
 
         // ================================
         // EJERCICIO 3: Comparación con equals()
@@ -37,6 +51,10 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
+        System.out.println(c3.equals(c4));
+        
+        
+
         // ================================
         // EJERCICIO 4: Comparación en Pelicula
         // ================================
@@ -48,6 +66,12 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Pregunta: ¿por qué en Pelicula equals no funciona como en Cancion?
 
         // Tu código aquí ↓
+
+        Pelicula p1 = new Pelicula("Inception", 2010);
+        Pelicula p2 = new Pelicula("Inception", 2010);
+        System.out.println(p1 == p2);
+        System.out.println(p1.equals(p2));
+
 
         // ================================
         // EJERCICIO 5: Referencias
@@ -63,6 +87,14 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
+        Cancion c5 = new Cancion("aaa", "eee");
+        Cancion c6 = c5;
+        System.out.println(c5 == c6);
+        c6.setTitutlo("hola");
+        System.out.println(c5);
+
+        // Al inicio era ambas true ya que c6 apuntaba a c5 y luego ambas falsas porque c6 y c5 eran nuevos objetos con distintos sitios en memoria y distintas cualidades
+
         // ================================
         // EJERCICIO 6: null
         // ================================
@@ -74,6 +106,12 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Explica: ¿qué significa realmente que una variable valga null?
 
         // Tu código aquí ↓
+        
+        Pelicula p3 = new Pelicula(null);
+        System.out.println(p3);
+        
+
+
 
     }
 }
