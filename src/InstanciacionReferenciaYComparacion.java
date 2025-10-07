@@ -108,10 +108,32 @@ public class InstanciacionReferenciaYComparacion {
         // Tu código aquí ↓
         
         Pelicula p3 = new Pelicula(null);
-        System.out.println(p3);
+        System.out.println(p3.getTitulo());
         
 
 
 
     }
 }
+        
+// ================================
+// RESPUESTAS DE REFLEXIÓN
+// ================================
+// Ejercicio 1: ¿Qué diferencia hay entre el constructor por defecto y el parametrizado?
+// Respuesta: el por defecto viene con un titulo y artista ya definido "desconocido" el otro es personalizable
+
+// Ejercicio 2: ¿Por qué da false al comparar con == dos objetos con los mismos datos?
+// Respuesta: porque son diferentes objetos a pesar de tener los mismos datos
+
+// Ejercicio 3: ¿Qué diferencia hay entre == y equals()? ¿Por qué ahora sí devuelve true?
+// Respuesta: == compara su valor en acceso a la memoria y equals sus caracteristicas
+
+// Ejercicio 4: ¿Por qué en Pelicula equals no funciona como en Cancion?
+// Respuesta: Porque en pelicula lo esta sobreescribiendo.
+
+// Ejercicio 5: ¿Qué ocurre cuando modificas el objeto a través de c6? ¿Qué demuestra?
+// Respuesta: cambia a c5 tambien ya que ambos apuntan a lo mismo.
+
+// Ejercicio 6: ¿Qué error aparece al acceder a un método de p3 siendo null?
+// ¿Qué significa realmente que una variable valga null?
+// Respuesta: el constructor pelicula esta indefinido, que una varaible valga null es que no tenga ningun atributo o cualidad.
