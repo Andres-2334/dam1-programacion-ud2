@@ -18,5 +18,6 @@ public class DatosUsuarios {
         } else { 
             System.out.println("Error al registrar correo invalido ");
         }
+        sc.close();
     }
 }
